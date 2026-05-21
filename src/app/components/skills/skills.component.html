@@ -1,0 +1,41 @@
+<section id="skills" class="section-wrap">
+  <div class="section-header reveal">
+    <div class="section-tag">Technical Expertise</div>
+    <h2 class="section-title">Skills &amp; <span class="accent">Technologies</span></h2>
+    <p class="section-sub">Tools I use to build production-grade applications</p>
+  </div>
+
+  <div class="skills-grid">
+    <div
+      #skillSection
+      class="skill-cat reveal"
+      *ngFor="let cat of data.skillCategories"
+    >
+      <h3><span>{{ cat.icon }}</span> {{ cat.title }}</h3>
+
+      <div class="skill-item" *ngFor="let skill of cat.skills">
+        <label>
+          <strong>{{ skill.name }}</strong>
+          <span>{{ skill.level }}%</span>
+        </label>
+        <div class="bar-track">
+          <div
+            class="bar-fill"
+            [ngClass]="'bar-' + skill.color"
+            [attr.data-level]="skill.level"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chips-wrap reveal">
+    <span
+      *ngFor="let chip of data.chips"
+      class="chip"
+      [ngClass]="'chip-' + chip.color"
+    >
+      {{ chip.label }}
+    </span>
+  </div>
+</section>

@@ -1,0 +1,61 @@
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
+  margin-bottom: 48px;
+}
+
+.skill-cat {
+  background: var(--card);
+  border: 1px solid rgba(99,102,241,.15);
+  border-radius: var(--radius);
+  padding: 28px;
+
+  h3 {
+    font-family: var(--font-h);
+    font-size: 1rem; font-weight: 700;
+    margin-bottom: 20px;
+    display: flex; align-items: center; gap: 10px;
+    span { font-size: 20px; }
+  }
+}
+
+.skill-item {
+  margin-bottom: 14px;
+  label {
+    display: flex; justify-content: space-between;
+    font-size: 0.85rem; margin-bottom: 6px; color: var(--muted);
+    strong { color: var(--text); }
+  }
+}
+
+.bar-track {
+  height: 6px;
+  background: rgba(255,255,255,.07);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%; border-radius: 99px; width: 0;
+  transition: width 1.2s cubic-bezier(.22, 1, .36, 1);
+}
+
+.bar-indigo { background: linear-gradient(90deg, var(--indigo), var(--cyan)); }
+.bar-pink   { background: linear-gradient(90deg, var(--pink), var(--amber)); }
+.bar-amber  { background: linear-gradient(90deg, var(--amber), var(--pink)); }
+
+.chips-wrap { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+
+.chip {
+  padding: 7px 16px; border-radius: 99px;
+  font-size: 0.82rem; font-weight: 600; border: 1px solid;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: default;
+  &:hover { transform: translateY(-2px); }
+}
+
+.chip-indigo { color: var(--indigo); border-color: rgba(99,102,241,.4);  background: rgba(99,102,241,.08);  &:hover { box-shadow: 0 4px 16px rgba(99,102,241,.3); } }
+.chip-pink   { color: var(--pink);   border-color: rgba(236,72,153,.4);  background: rgba(236,72,153,.08);  &:hover { box-shadow: 0 4px 16px rgba(236,72,153,.3); } }
+.chip-cyan   { color: var(--cyan);   border-color: rgba(6,182,212,.4);   background: rgba(6,182,212,.08);   &:hover { box-shadow: 0 4px 16px rgba(6,182,212,.3); } }
+.chip-amber  { color: var(--amber);  border-color: rgba(245,158,11,.4);  background: rgba(245,158,11,.08);  &:hover { box-shadow: 0 4px 16px rgba(245,158,11,.3); } }
