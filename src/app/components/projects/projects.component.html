@@ -1,0 +1,21 @@
+<section id="projects" class="section-wrap">
+  <div class="section-header reveal">
+    <div class="section-tag">My Work</div>
+    <h2 class="section-title">Academic <span class="accent">Projects</span></h2>
+  </div>
+
+  <div class="projects-grid">
+    <div
+      #projectCard
+      class="project-card"
+      *ngFor="let proj of data.projects"
+    >
+      <div class="proj-emoji">{{ proj.emoji }}</div>
+      <div class="proj-title">{{ proj.title }}</div>
+      <div class="proj-desc">{{ proj.description }}</div>
+      <div class="proj-tags">
+        <span class="proj-tag" *ngFor="let tag of proj.tags">{{ tag }}</span>
+      </div>
+    </div>
+  </div>
+</section>

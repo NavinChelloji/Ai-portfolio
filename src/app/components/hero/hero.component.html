@@ -1,0 +1,36 @@
+<section id="hero">
+  <div class="hero-content">
+    <div class="hero-tag">
+      <span class="blink"></span>
+      Open to Opportunities
+    </div>
+
+    <h1 class="hero-name">
+      <span class="shimmer-text">{{ data.name }}</span>
+    </h1>
+
+    <p class="hero-subtitle">
+      {{ data.title }} &amp; <strong>Frontend Engineer</strong><br />
+      {{ data.tagline }}
+    </p>
+
+    <div class="hero-ctas">
+      <button class="btn-primary" (click)="scrollTo('contact')">Get In Touch</button>
+      <button class="btn-ghost" (click)="scrollTo('experience')">View Work ↓</button>
+    </div>
+  </div>
+
+  <div class="hero-card-wrap">
+    <div class="hero-card">
+      <div class="card-avatar">NC</div>
+      <div class="card-name">{{ data.name }}</div>
+      <div class="card-role">{{ data.title }} Quantela Pvt Ltd</div>
+      <div class="card-stats">
+        <div class="stat" *ngFor="let stat of data.stats">
+          <div class="stat-val">{{ stat.value }}</div>
+          <div class="stat-lbl">{{ stat.label }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

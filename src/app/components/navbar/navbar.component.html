@@ -1,0 +1,19 @@
+<nav [class.scrolled]="scrolled">
+  <div class="nav-logo" (click)="scrollTo('hero')">
+    Naveen<span class="dot">.</span>
+  </div>
+
+  <ul class="nav-links">
+    <li *ngFor="let link of navLinks">
+      <a (click)="scrollTo(link.id)">{{ link.label }}</a>
+    </li>
+  </ul>
+
+  <button class="nav-menu-btn" (click)="toggleMenu()">
+    {{ menuOpen ? '✕' : '☰' }}
+  </button>
+</nav>
+
+<div class="mobile-nav" [class.open]="menuOpen">
+  <a *ngFor="let link of navLinks" (click)="scrollTo(link.id)">{{ link.label }}</a>
+</div>

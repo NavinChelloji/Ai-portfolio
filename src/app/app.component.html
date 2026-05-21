@@ -1,0 +1,43 @@
+<!-- Custom Cursor -->
+<div class="cursor"
+  [style.left.px]="cursorX"
+  [style.top.px]="cursorY">
+</div>
+<div class="cursor-ring"
+  [style.left.px]="cursorX"
+  [style.top.px]="cursorY">
+</div>
+
+<!-- Loading Screen -->
+<div class="loader" [class.hide]="!loading">
+  <div class="loader-initials">NC</div>
+  <div class="loader-bar-wrap">
+    <div class="loader-bar"></div>
+  </div>
+</div>
+
+<!-- Noise overlay -->
+<div class="noise"></div>
+
+<!-- Particles -->
+<app-particles></app-particles>
+
+<!-- Navbar -->
+<app-navbar></app-navbar>
+
+<!-- Main Content -->
+<main>
+  <app-hero></app-hero>
+  <app-skills></app-skills>
+  <app-experience></app-experience>
+  <app-projects></app-projects>
+  <app-education></app-education>
+  <app-contact></app-contact>
+</main>
+
+<footer>
+  <p>Designed &amp; Developed by <span>Naveen Chelloji</span> · Angular Developer</p>
+</footer>
+
+<!-- Chatbot -->
+<app-chatbot></app-chatbot>

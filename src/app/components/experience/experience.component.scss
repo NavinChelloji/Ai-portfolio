@@ -1,0 +1,75 @@
+.timeline {
+  position: relative;
+  padding-left: 40px;
+
+  &::before {
+    content: '';
+    position: absolute; left: 14px; top: 8px; bottom: 8px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--indigo), var(--pink), transparent);
+  }
+}
+
+.timeline-item {
+  position: relative; margin-bottom: 48px;
+  opacity: 0; transform: translateX(-20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  &.visible { opacity: 1; transform: none; }
+}
+
+.timeline-dot {
+  position: absolute; left: -35px; top: 6px;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--indigo), var(--pink));
+  box-shadow: 0 0 16px rgba(99,102,241,.6);
+}
+
+.timeline-card {
+  background: var(--card);
+  border: 1px solid rgba(99,102,241,.15);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  &:hover {
+    border-color: rgba(99,102,241,.4);
+    box-shadow: 0 8px 40px rgba(99,102,241,.15);
+  }
+}
+
+.tl-meta {
+  display: flex; align-items: center; gap: 12px;
+  flex-wrap: wrap; margin-bottom: 8px;
+}
+
+.tl-role {
+  font-family: var(--font-h); font-size: 1.15rem; font-weight: 700;
+}
+
+.tl-company {
+  background: rgba(99,102,241,.15); color: var(--indigo);
+  border-radius: 99px; padding: 3px 12px;
+  font-size: 0.8rem; font-weight: 600;
+}
+
+.tl-date { color: var(--muted); font-size: 0.82rem; }
+
+.tl-project { color: var(--cyan); font-size: 0.9rem; margin-bottom: 12px; font-weight: 500; }
+
+.tl-list {
+  list-style: none; display: flex; flex-direction: column; gap: 8px;
+
+  li {
+    color: var(--muted); font-size: 0.9rem;
+    padding-left: 16px; position: relative; line-height: 1.6;
+    &::before { content: '▸'; position: absolute; left: 0; color: var(--indigo); }
+  }
+}
+
+.tl-tech-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+
+.tl-tech {
+  background: rgba(6,182,212,.1); color: var(--cyan);
+  border: 1px solid rgba(6,182,212,.2);
+  border-radius: 6px; padding: 3px 10px;
+  font-size: 0.75rem; font-weight: 600;
+}

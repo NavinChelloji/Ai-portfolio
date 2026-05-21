@@ -1,0 +1,30 @@
+<section id="experience" class="section-wrap">
+  <div class="section-header reveal">
+    <div class="section-tag">Work History</div>
+    <h2 class="section-title">Professional <span class="accent">Experience</span></h2>
+  </div>
+
+  <div class="timeline">
+    <div
+      #timelineItem
+      class="timeline-item"
+      *ngFor="let exp of data.experiences"
+    >
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <div class="tl-meta">
+          <span class="tl-role">{{ exp.role }}</span>
+          <span class="tl-company">{{ exp.company }}</span>
+          <span class="tl-date">🗓 {{ exp.period }}</span>
+        </div>
+        <div class="tl-project">📌 {{ exp.project }}</div>
+        <ul class="tl-list">
+          <li *ngFor="let bullet of exp.bullets">{{ bullet }}</li>
+        </ul>
+        <div class="tl-tech-row">
+          <span class="tl-tech" *ngFor="let t of exp.tech">{{ t }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
