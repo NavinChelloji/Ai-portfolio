@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    apiUrl: 'https://your-backend-app.onrender.com'
+    apiUrl: 'https://ai-portfolio-service.onrender.com'
 };
