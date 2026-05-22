@@ -71,10 +71,10 @@ export class ChatbotComponent {
         this.isLoading = false;
         this.scrollToBottom();
       },
-      error: () => {
+      error: (error) => {
         this.messages.push({
           role: 'bot',
-          text: '⚠️ Could not reach the server. Please make sure the Node.js server is running on port 3000.',
+          text: error.error?.error || error?.error,
         });
         this.isLoading = false;
         this.scrollToBottom();
